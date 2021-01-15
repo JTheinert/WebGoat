@@ -1,0 +1,16 @@
+
+Name: Minimal example
+on: [push]
+
+jobs:
+minimal_example:
+    runs-on: ubuntu-latest
+    steps:
+      - id: action_with_json_output
+        run: 'echo ::set-output name=data::{ "foo": { "bar":"baz" } }'
+      - id: data
+        uses: gr2m/get-json-paths-action@v1.x
+        with:
+          json: ${{ steps.action_with_json_output.outputs.data }}
+          bar: "foo.bar"
+      - run: "echo bar is ${{ steps.data.outputs.bar }}"
