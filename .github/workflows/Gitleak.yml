@@ -1,4 +1,3 @@
-
 name: gitleaks
 
 on: [push,pull_request]
@@ -6,14 +5,17 @@ on: [push,pull_request]
  
 jobs:
   gitleaks:
-       runs-on: ubuntu-latest
-       steps:
-        
-         - run: mkdir -p /
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: '0'
 
-         - run: echo hello > /world.txt
-
-         - uses: actions/upload-artifact@v2
-           with:
-            name: my-artifact
-            path: /world.txt
+    - name: gitleaks-action
+      uses: JTheinert/gitleaks-action@master
+    - name: Gitleaks report
+      if: ${{ always() }}
+      uses: actions/upload-artifact@v2
+      with:
+         name: gitleaks report
+         path: gitleaks-report.json
