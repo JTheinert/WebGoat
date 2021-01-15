@@ -18,4 +18,5 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
          name: gitleaks report
-         path: /gitleaks-report.json
+         path: WebGoat/gitleaks-report.json
+
