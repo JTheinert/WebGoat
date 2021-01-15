@@ -18,4 +18,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
          name: gitleaks report
-         path: /JTheinert/WebGoat/blob/develop/gitleaks-report.json
+         path: /gitleaks-report.json
