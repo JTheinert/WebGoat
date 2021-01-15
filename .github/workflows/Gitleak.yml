@@ -13,3 +13,9 @@ jobs:
 
     - name: gitleaks-action
       uses: JTheinert/gitleaks-action@master
+    - name: Gitleaks report
+      if: ${{ always() }}
+      uses: actions/upload-artifact@v2
+      with:
+         name: gitleaks report
+         path: Webgoat/gitleaks-report.json
