@@ -19,7 +19,7 @@
  },
 {
     "message": "This is a annotation on file outside of changed",
-    "path": "README.md",
+    "path": "README.MD",
     "line": { "start": 1, "end": 1 },
     "level": "warning"
   }
