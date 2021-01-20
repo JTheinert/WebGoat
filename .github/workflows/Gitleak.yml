@@ -20,8 +20,8 @@ jobs:
          name: gitleaks report
          path: gitleaks-report.json
     - name: Annotate
-      uses: yuzutech/annotations-action@v0.1.0
+      uses: Attest/annotations-action@v0.1.0
       with:
-        title: 'lint'
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
-        input: gitleaks-report.json
+          token: ${{ secrets.GITHUB_TOKEN }}
+          input: 'gitleaks-report.json'
+          title: 'Annotate Files'
