@@ -23,5 +23,5 @@ jobs:
       uses: Attest/annotations-action@v1.0.7
       with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          input: './annotations.json'
+          input: gitleaks-report.json
           title: 'Annotate Files'
