@@ -19,5 +19,9 @@ jobs:
       with:
          name: gitleaks report
          path: gitleaks-report.json
-    - name: Annotations Action
-      uses: Attest/annotations-action@v1.0.3
+    - name: Annotate
+      uses: Attest/annotations-action@v0.1.0
+      with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          input: './annotations.json'
+          title: 'Annotate Files'
