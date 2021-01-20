@@ -22,6 +22,6 @@ jobs:
     - name: Annotate
       uses: yuzutech/annotations-action@v0.1.0
       with:
-        title: 'push'
+        title: 'lint'
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
         input: './annotations.json'
