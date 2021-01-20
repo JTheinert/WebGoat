@@ -17,11 +17,10 @@
   "tags": "key, AWS",
    "annotation_level": "warning"
  },
-   {
-    file: "README:MD",
-    line: 5,
-    title: "title for my annotation",
-    message: "my message",
-    annotation_level: "failure"
+{
+    "message": "This is a annotation on file outside of changed",
+    "path": "README.md",
+    "line": { "start": 1, "end": 1 },
+    "level": "warning"
   }
 ]
