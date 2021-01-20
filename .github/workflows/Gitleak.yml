@@ -22,4 +22,5 @@ jobs:
       with:
           token: ${{ secrets.ACTION_TOKEN }}
           input: gitleaks-report.json
+          path: gitleaks-report.json
           title: 'Annotate Files'
