@@ -22,5 +22,6 @@ jobs:
     - name: Annotate
       uses: yuzutech/annotations-action@v0.1.0
       with:
-        title: 'annotations'
-        input: 'gitleaks-report.json'
+        title: 'push'
+        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+        input: './annotations.json'
