@@ -24,4 +24,4 @@ jobs:
       with:
         title: 'lint'
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
-        input: './annotations.json'
+        input: gitleaks-report.json
