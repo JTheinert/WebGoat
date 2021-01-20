@@ -1,22 +1,5 @@
 
 [
- {
-  "line": "    access_key_id: AKIAJQLKPGHXRH2AH5QA",
-  "lineNumber": 32,
-  "offender": "AKIAJQLKPGHXRH2AH5QA",
-  "commit": "431222e7408882ff015d409f82a367153c5d1bba",
-  "repo": "workspace",
-  "repoURL": "",
-  "leakURL": "",
-  "rule": "AWS Access Key",
-  "commitMessage": "Push multiple branches\n",
-  "author": "Nanne Baars",
-  "email": "nbaars@xebia.com",
-  "file": ".travis.yml",
-  "date": "2016-11-19T15:11:53+01:00",
-  "tags": "key, AWS",
-   "annotation_level": "warning"
- },
 {
     "message": "This is a annotation on file outside of changed",
     "path": "README.MD",
