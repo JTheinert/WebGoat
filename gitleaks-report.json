@@ -414,7 +414,8 @@
   "email": "rene@zubcevic.com",
   "file": "webgoat-lessons/crypto/src/main/java/org/owasp/webgoat/crypto/CryptoUtil.java",
   "date": "2019-11-23T21:52:14+01:00",
-  "tags": "key, AsymmetricPrivateKey"
+  "tags": "key, AsymmetricPrivateKey",
+  "annotation_level": "warning"
  },
  {
   "line": "    access_key_id: AKIAJQLKPGHXRH2AH5QA",
@@ -430,7 +431,7 @@
   "email": "nbaars@xebia.com",
   "file": ".travis.yml",
   "date": "2016-11-19T15:11:53+01:00",
-  "tags": "key, AWS"
-   annotation_level: "failure"
+  "tags": "key, AWS",
+   "annotation_level": "warning"
  }
 ]
