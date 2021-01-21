@@ -10,17 +10,18 @@ jobs:
     - uses: actions/checkout@v2
       with:
         fetch-depth: '0'
-
+    - name: gitleaks-action
+      uses: JTheinert/gitleaks-action@master
+    - name: Gitleaks report
+      if: ${{ always() }}
+      uses: actions/upload-artifact@v2
+      with:
+         name: gitleaks report
+         path: gitleaks-report.json
     - name: create npmrc
       run: |
         touch ~/.npmrc 
         echo "//npm.pkg.github.com/:_authToken={githubtoken} \
         @attest:registry=https://npm.pkg.github.com/" >> ~/.npmrc
         cat ~/.npmrc
-    - name: Annotate
-      uses: Attest/annotations-action@v1.0.7
-      with:
-          token: ${{ secrets.ACTION_TOKEN }}
-          input: gitleaks-report.json
-          path: gitleaks-report.json
-          title: 'Annotate Files'
+  
